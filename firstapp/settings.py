@@ -23,9 +23,9 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 SECRET_KEY = '5v-c^r%fpfx4xgr!===#s^0sr4qmcyf=w!2(b-mofd%6fsph5)'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = False
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['*']
 
 
 # Application definition
@@ -75,15 +75,19 @@ WSGI_APPLICATION = 'firstapp.wsgi.application'
 # https://docs.djangoproject.com/en/1.11/ref/settings/#databases
 
 DATABASES = {
-    # Local
+    #Local
     'default': {
         'ENGINE': 'django.db.backends.postgresql_psycopg2',
-        'NAME': 'postgres',
-        'USER': 'postgres',
-        'PASSWORD': 'admin',
-        'HOST': 'localhost',
+        'NAME': 'dc1bfj1gsf2qsl',
+        'USER': 'kmyzupywrzmhle',
+        'PASSWORD': 'ea8df11a9991145cdcf2a683b08febba9450d3c0c36bd33526954dcded16272f',
+        'HOST': 'ec2-54-83-13-119.compute-1.amazonaws.com',
         'PORT': '5432'
     }
+
+    #Amazon
+
+
 }
 
 
@@ -124,3 +128,4 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/1.11/howto/static-files/
 
 STATIC_URL = '/static/'
+STATIC_ROOT = BASE_DIR+'static'

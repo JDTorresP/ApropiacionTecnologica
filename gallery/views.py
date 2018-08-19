@@ -16,3 +16,6 @@ def all_users(request):
     all_users_objects = User.objects.all()
 
     return HttpResponse(jsonserializer.serialize("json", all_users_objects))
+
+def home(request):
+    return render(request, 'home.html')
